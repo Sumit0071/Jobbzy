@@ -8,7 +8,7 @@
 
 ## 📖 Project Overview
 
-The **Job Portal** is a web application where users can find jobs, apply for positions, and manage their applications. Employers can post job listings, review candidates, and manage the hiring process. The portal aims to streamline the job-seeking and hiring experience for both candidates and employers.
+The **Jobbzy** is a web application where users can find jobs, apply for positions, and manage their applications. Employers can post job listings, review candidates, and manage the hiring process. The portal aims to streamline the job-seeking and hiring experience for both candidates and employers.
 
 ---
 
