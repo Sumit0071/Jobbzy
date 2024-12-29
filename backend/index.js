@@ -19,7 +19,7 @@ app.use( cookieParser() );
 const corsOption = {
   // origin: "https://jobportal-frontend-z8ux.onrender.com",
   // origin: "http://localhost:5173",
-  origin:process.env.VITE_FRONTEND_URI,
+  origin: `${process.env.VITE_FRONTEND_URI}`,
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
   allowedHeaders: ["Content-Type", "Authorization"],
