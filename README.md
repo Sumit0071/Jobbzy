@@ -2,7 +2,7 @@
 
 ## 🚀 Live Demo
 
-[Click here to view the live site](https://jobportal-frontend-z8ux.onrender.com/)
+[Click here to view the live site](https://jobbzy-sumit-adhikaris-projects.vercel.app/)
 
 ---
 
