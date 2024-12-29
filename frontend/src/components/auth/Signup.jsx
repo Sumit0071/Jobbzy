@@ -95,7 +95,7 @@ const Signup = () => {
 
           <div className="my-2">
             <Label>Full Name</Label>
-            <Input type="text" value={input.fullname} name="fullname" onChange={changeEventHandler} placeholder="e.g Arsh" />
+            <Input type="text" value={input.fullname} name="fullname" onChange={changeEventHandler} placeholder="e.g Sumit" />
           </div>
           <div className="my-2">
             <Label>Email</Label>
