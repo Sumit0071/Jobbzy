@@ -71,3 +71,9 @@ The **Jobbzy** is a web application where users can find jobs, apply for positio
 ```bash
 git clone https://github.com/Sumit0071/Jobbzy
 cd jobbzy
+```
+or If  you've Docker installed in your local machine run with docker compose
+###
+```bash
+docker-compose up
+```
