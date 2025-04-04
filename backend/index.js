@@ -7,7 +7,8 @@ import userRouter from './routes/user.route.js'
 import companyRoute from './routes/company.route.js';
 import jobRoute from './routes/jobs.route.js';
 import applicationRoute from './routes/application.route.js';
-
+import swaggerUI from "swagger-ui-express";
+import swaggerSpec from "./swagger.js";
 dotenv.config( {} );
 const app = express();
 
@@ -16,6 +17,8 @@ const app = express();
 app.use( express.json() );
 app.use( express.urlencoded( { extended: true } ) );
 app.use( cookieParser() );
+//integrate swagger
+app.use( '/api-docs', swaggerUI.serve, swaggerUI.setup( swaggerSpec ) );
 const corsOption = {
   // origin: "https://jobportal-frontend-z8ux.onrender.com",
   // origin: "http://localhost:5173",
