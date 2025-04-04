@@ -77,3 +77,6 @@ or If  you've Docker installed in your local machine run with docker compose
 ```bash
 docker-compose up
 ```
+
+visit the API documentation here upon running the project successfully
+[http://localhost:5000/api-docs](http://localhost:5000/api-docs)
