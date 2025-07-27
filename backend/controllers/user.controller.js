@@ -20,8 +20,8 @@ export const register = async ( req, res ) => {
 
     const cloudResponse = await cloudinary.uploader.upload( fileUri.content );
 
-    const user = await User.findOne( { email } ).explain( "executionStats" );
-
+    const user = await User.findOne( { email } );
+    // Check if user already exists
     if ( user ) {
       return res.status( 400 ).json( {
         message: "User already exists with this email",
@@ -66,7 +66,7 @@ export const login = async ( req, res ) => {
       } );
     }
 
-    let user = await User.findOne( { email } ).explain( "executionStats" );
+    let user = await User.findOne( { email } );
 
     if ( !user ) {
       return res.status( 400 ).json( {
