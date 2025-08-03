@@ -20,44 +20,44 @@ const fitlerData = [
 ]
 
 const FilterCard = () => {
-    const [selectedValue, setSelectedValue] = useState("");
+    const [selectedValue, setSelectedValue] = useState( "" );
     const dispatch = useDispatch();
 
-    const handleChange = (value)=>{
-        setSelectedValue(value);
+    const handleChange = ( value ) => {
+        setSelectedValue( value );
     }
-    useEffect(()=>{
-        dispatch(setSerachQuery(selectedValue));
-        
-    },[selectedValue])
-    
-  return (
-    <div className='w-full bg-white p-3 rounded-md '>
-        <h1 className='font-bold text-lg'>Filter Jobs</h1>
-        <hr className='mt-3'/>
+    useEffect( () => {
+        dispatch( setSerachQuery( selectedValue ) );
 
-        <RadioGroup value={selectedValue} onValueChange={handleChange}>
-            {
-                fitlerData.map((data, idx)=>(
-                    <div>
-                        <h1 className='font-bold text-lg'>{data.fitlerType}</h1>
-                        {
-                            data.array.map((item, index)=>{
-                                const itemId = `r${idx}-${index}`
-                                return (
-                                    <div className='flex items-center space-x-2 my-2'>
-                                        <RadioGroupItem value={item} id={itemId}/>
-                                        <Label htmlFor={itemId}>{item}</Label>
-                                    </div>
-                                )
-                            })
-                        }
-                    </div>
-                ))
-            }
-        </RadioGroup>
-    </div>
-  )
+    }, [selectedValue] )
+
+    return (
+        <div className='w-full bg-white p-3 rounded-md '>
+            <h1 className='font-bold text-lg'>Filter Jobs</h1>
+            <hr className='mt-3'/>
+
+            <RadioGroup value={selectedValue} onValueChange={handleChange}>
+                {
+                    fitlerData.map((data, idx)=>(
+                        <div>
+                            <h1 className='font-bold text-lg'>{data.fitlerType}</h1>
+                            {
+                                data.array.map((item, index)=>{
+                                    const itemId = `r${idx}-${index}`
+                                    return (
+                                        <div className='flex items-center space-x-2 my-2'>
+                                            <RadioGroupItem value={item} id={itemId}/>
+                                            <Label htmlFor={itemId}>{item}</Label>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
+                    ))
+                }
+            </RadioGroup>
+        </div>
+    )
 }
 
 export default FilterCard
